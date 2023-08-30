@@ -10,3 +10,29 @@ export interface ButtonProps {
     children: ReactNode; 
     roomId?: string;
 }
+
+export interface IPeer {
+    userName: string;
+    peerId: string;
+}
+
+
+
+export interface IMessage {
+    content: string;
+    author?: string;
+    timestamp: number;
+}
+
+
+declare global {
+    interface AUTWindow {
+        Peer: Peer;
+    }
+    interface Window {
+        Cypress: Cypress.Cypress;
+        Peer: Peer;
+    }
+}
+
+export default global;

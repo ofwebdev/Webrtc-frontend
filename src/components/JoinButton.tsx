@@ -3,10 +3,10 @@ import { Button } from "./common/Button";
 import { RoomContext } from "../context/RoomContext";
 
 export default function JoinButton(): JSX.Element {
-  const { sw } = useContext(RoomContext);
+  const { ws } = useContext(RoomContext);
 
   const createRoom = () => {
-    sw.emit("create-room");
+    ws.emit("create-room");
   };
 
   return (
